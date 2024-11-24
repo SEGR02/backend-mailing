@@ -14,6 +14,8 @@ app.use(express.json({ limit: "10mb" }));
 app.post("/", (req: any, res: any) => {
   try {
     const { email } = req.body;
+    console.log(email);
+    console.log(req.body);
     const nodemailer = require("nodemailer");
 
     let transporter = nodemailer.createTransport({
